@@ -1,0 +1,182 @@
+<%- include('partials/_header'); -%>
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <img src="storage/loader.png" alt="preloader icon">
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+
+
+    <!-- ===============>> light&dark switch start here <<================= -->
+    <div class="lightdark-switch d-none">
+        <span class="dark-btn" id="btnSwitch"><img src="frontend_assets/images/icon/moon.svg"
+                alt="light-dark-switchbtn" class="swtich-icon"></span>
+    </div>
+    <!-- ===============>> light&dark switch start here <<================= -->
+
+
+    <!-- ===============>> Header section start here <<================= -->
+    <header class="header-section header-section--style2">
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="/">
+                            <img class="dark" style="width: 204.8px; height: 50px;"
+                                src="storage/logo-dark.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="menu-area">
+                        <ul class="menu menu--style1">
+                                                                                                <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a href="#about">About Us</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a href="#benefits">Benefits</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a href="#services">Services</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a href="#reviews">Reviews</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a href="#faqs">FAQs</a>
+                                    </li>
+                                                                                                                                <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">Policies </a>
+                                        <ul class="submenu">
+                                                                                            <li><a href="/privacy">Privacy Policy</a></li>
+                                                                                            <li><a href="/terms">Terms &amp; Conditions</a></li>
+                                                                                    </ul>
+                                    </li>
+                                                                                    </ul>
+
+                    </div>
+                    <div class="header-action">
+                        <div class="menu-area">
+                            <div class="header-btn">
+                                                                    <a href="/register"
+                                        class="trk-btn trk-btn--border trk-btn--primary">
+                                        <span>Join Now</span>
+                                    </a>
+                                                            </div>
+
+                            <!-- toggle icons -->
+                            <div class="header-bar d-lg-none header-bar--style1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===============>> Header section end here <<================= -->
+
+
+        <section wire:id="t13oE71KwtpgDAxuCzlU" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;t13oE71KwtpgDAxuCzlU&quot;,&quot;name&quot;:&quot;frontend.auth.login&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;login&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;6fe9e2e1&quot;,&quot;data&quot;:{&quot;token&quot;:null,&quot;password&quot;:null,&quot;showPassword&quot;:true},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;8ed03d51f8a24e696bb6da8fa6bf4036d1af695f96a7191c884521711348f83c&quot;}}" class="account padding-top padding-bottom sec-bg-color2">
+    <div class="container">
+        <div class="account__wrapper">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="account__content account__content--style1">
+
+                        <!-- account tittle -->
+                        <div class="account__header">
+                            <h2>
+                                Login to your account
+                            </h2>
+                            <p>
+                                Welcome Back! Please log in to continue!
+                            </p>
+                        </div>
+
+                        <!-- account form -->
+                        <form  class="account__form needs-validation" action="/login" method="POST">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div>
+                                        <label class="form-label">Your Login Email</label>
+                                        <input class="form-control" type="email"
+                                            name="email" id="email"   placeholder="Enter Your Login Email">
+                                    </div>
+                                    <span class="email error"></span>
+                                                                    </div>
+                                <div class="col-12">
+                                    <div class="form-pass">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control showhide-pass" placeholder="Make a Strong Password">
+
+                                        <span class="password error"></span>
+
+                                        <button type="button" class="form-pass__toggle"
+                                                style="cursor: pointer !important;">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                                                    </div>
+                            </div>
+
+
+                            <button type="submit" class="trk-btn trk-btn--border trk-btn--primary d-block mt-4">Sign
+                                In</button>
+                        </form>
+
+
+                        <div class="account__switch">
+                            <p>Don't have an account <a href="/register">Register here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="account__shape">
+        <span class="account__shape-item account__shape-item--1"><img
+                src="frontend_assets/images/contact/4.png" alt="shape-icon"></span>
+    </div>
+</section>
+
+<script>
+    const form = document.querySelector('form');
+     const emailError = document.querySelector('.email.error');
+     const passwordError = document.querySelector('.password.error');
+     form.addEventListener('submit', async (e) => {
+       e.preventDefault();
+       // reset errors
+       emailError.textContent = '';
+       passwordError.textContent = '';
+       // get values
+       const email = form.email.value;
+       const password = form.password.value;
+       try {
+         const res = await fetch('/login', { 
+           method: 'POST', 
+           body: JSON.stringify({ email, password }),
+           headers: {'Content-Type': 'application/json'}
+         });
+         const data = await res.json();
+         // console.log(data);
+         if (data.errors) {
+           emailError.textContent = data.errors.email;
+           passwordError.textContent = data.errors.password;
+         }
+         if (data.user) {
+           location.assign('/dashboard');
+         }
+       }
+       catch (err) {
+         console.log(err);
+       }
+     });
+   
+   
+   </script>
+
+<%- include('partials/_footer'); -%>
